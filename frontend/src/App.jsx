@@ -77,7 +77,7 @@ function App() {
             {/* Thanh tìm kiếm và sắp xếp */}
 
             <div className='flex gap-2 items-center justify-center bg-[#f5f5f5] mx-auto relative w-[50%] '>
-                <select className='p-2' onChange={handleChange}>
+                <select className='p-2 cursor-pointer outline-none' onChange={handleChange} >
                   <option value="">All</option>
                   <option value="descrease">High to Low</option>
                   <option value="increase">Low to High</option>
@@ -114,7 +114,7 @@ function App() {
             <div className='flex items-center justify-center '>
               {
                 Array.from({length: totalPages}, (_, index) => (
-                  <button key={index} className={` p-2 px-4 m-2 cursor-pointer outline-none ${currentPage === index + 1 ? 'bg-blue-500 text-white' : 'bg-gray-300 text-black'} rounded-lg`} onClick={() => setCurrentPage(index + 1)  }>
+                  <button key={index} className={` p-2 px-4 m-2 cursor-pointer outline-none hover:bg-blue-400 transition duration-200 ${currentPage === index + 1 ? 'bg-blue-500 text-white' : 'bg-gray-300 text-black'} rounded-lg`} onClick={() => setCurrentPage(index + 1)  }>
                     {index+1}
                   </button>
                 ))
